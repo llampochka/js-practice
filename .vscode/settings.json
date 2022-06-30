@@ -1,0 +1,9 @@
+{
+    "ShortcutMenuBar.copy": false,
+    "ShortcutMenuBar.save": true,
+    "ShortcutMenuBar.saveAll": true,
+    "ShortcutMenuBar.redo": true,
+    "ShortcutMenuBar.showCommands": false,
+    "ShortcutMenuBar.undo": true,
+    "screencastMode.onlyKeyboardShortcuts": false
+}

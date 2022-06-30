@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="script.js" defer> // defer - скрипт грузится асинхронно, не блокирует отрисовку и начнет выполнятся только когда вся html страница будет загружена
+        alert('hello') // проигнорируется
+    </script>
+    <style>
+        p::after {
+            content: "*";
+        }
+
+        p:first-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test Observer pattern</h1>
+
+    <textarea id='textField'></textarea>
+    <div>
+        Words Count:
+        <p id='countField'></p>
+    </div>
+    <button id="btn">Test button</button>
+
+
+</body>
+
+</html>
+
+

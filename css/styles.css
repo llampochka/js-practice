@@ -1,0 +1,31 @@
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+.block-centered {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    /* выравниванием элементов по основной оси */
+    align-items: center;
+    /* выравниванием элементов по перпендикулярной оси */
+    height: 100px;
+}
+
+.block-centered .inner {
+    border: 1px solid blue;
+}
+
+.block-centered-oldschool {
+    border: 1px solid red;
+    height: 100px;
+    position: relative;
+}
+
+.block-centered-oldschool .inner {
+    border: 1px solid blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

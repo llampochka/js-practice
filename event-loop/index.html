@@ -1,0 +1,56 @@
+<head>
+
+</head>
+
+<body>
+    <h1>Test event loop</h1>
+    <div id="progress"></div>
+    <div id="progress2"></div>
+    <button id="btn">Test click</button>
+
+    <script>
+        console.log('start');
+        const btn = document.getElementById('btn');
+
+        function handleClick() {
+            setTimeout(() => {
+                console.log('timeout done');
+            }, 2000)
+            console.log('handle click');
+        }
+
+        btn.addEventListener('click', handleClick);
+
+        console.log('end');
+    </script>
+
+    <script>
+        let i = 0;
+
+        // решение
+        function count2() {
+
+            // сделать часть крупной задачи (*)
+            do {
+                i++;
+                progress.innerHTML = i;
+            } while (i % 1e3 != 0);
+
+            if (i < 1e7) {
+                setTimeout(count2);
+            }
+
+        }
+
+        // count2();
+
+
+        function count() {
+            // for (let i = 0; i < 1e6; i++) {
+            //     progress.innerHTML = i; // выведет 999999 только 1 раз в самом конце, тк отрисовка не выполняется, пока идут вычисления
+            // }
+        }
+        count();
+
+    </script>
+</body>
