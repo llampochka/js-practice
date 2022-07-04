@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Свойства width и height включают в себя значения padding и border, но не margin. */
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+    grid-template-rows: 80px 1fr 100px;
+    grid-template-columns: 150px auto;
+    height: 100vh;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    height: auto;
+    grid-template-areas: 
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+    grid-template-rows: repeat(4, auto);  
+    grid-template-columns: 1fr;
+ }
+}
+
+#header {
+    background-color: aquamarine;
+    grid-area: header;    
+}
+
+#sidebar {
+    background-color: lightyellow;
+    grid-area: sidebar;
+}
+
+#content {
+    background-color: palevioletred;
+    grid-area: content;
+}
+
+#footer {
+    background-color: blueviolet;
+    grid-area: footer;
+}
+
+.posts {
+    display: grid;
+    grid-template-areas:
+    "post1 post2"
+    "post1 post3";
+    border: 1px solid red;
+}
+.post-1 {
+    grid-area: post1;
+    background-color:chartreuse
+}
+.post-2 {
+    grid-area: post2
+}
+.post-3 {
+    grid-area: post3
+}

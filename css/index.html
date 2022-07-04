@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Test css</h1>
+    <h2>Test block-centered</h2>
 
+    <h3>Centered by flexbox</h3>
     <div class="block-centered">
-        <div class="inner">Centered block</div>
+        <div class="inner">
+            Centered block<br>
+            Используем flexbox <code>justify-content: center;</code> и <code>align-items: center; </code>
+        </div>
     </div>
 
+    <h3>Centered by translate()</h3>
     <div class="block-centered-oldschool">
         <div class="inner">
             <p>Centered block</p>
-            <p>Centered block</p>
+            <p>
+                <code>transform: translate(x,y)</code>
+                Сдвигает элемент на новое место, перемещая относительно обычного положения вправо и вниз, используя
+                координаты X и Y, не затрагивая при этом соседние элементы. Если нужно сдвинуть элемент влево или вверх,
+                то нужно использовать отрицательные значения.
+            </p>
         </div>
     </div>
+
+    <h2>Grids</h2>
+
+    <div class="grid-container">
+        <div class="box-1"> width: 200px </div>
+        <div class="box-2"> Оставшееся пространство </div>
+        <div class="box-3"> width: 100px </div>
+    </div>
+
+    <div class="grid-container-areas">
+        <div class="box-1">A - занимает 12 колонок</div>
+        <div class="box-2">B - занимает 10 колонок<br> еще строка</div>
+        <div class="box-3">C - занимает 2 колонки</div>
+    </div>
+
+
 </body>
 
 </html>
-
-

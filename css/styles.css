@@ -1,14 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Свойства width и height включают в себя значения padding и border, но не margin. */
+    box-sizing: border-box;
+}
+
 body {
     font: 16px Arial, Helvetica, sans-serif;
+    padding: 20px;
 }
 
 .block-centered {
     border: 1px solid red;
     display: flex;
-    justify-content: center;
     /* выравниванием элементов по основной оси */
-    align-items: center;
+    justify-content: center;
     /* выравниванием элементов по перпендикулярной оси */
+    align-items: center;    
     height: 100px;
 }
 
@@ -18,7 +26,7 @@ body {
 
 .block-centered-oldschool {
     border: 1px solid red;
-    height: 100px;
+    height: 150px;
     position: relative;
 }
 
@@ -28,4 +36,41 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Grids */
+[class^="box-"] {
+    background-color: skyblue;
+    border: 1px solid blueviolet;    
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 200px auto 100px;
+}
+
+.grid-container [class^="box-"] {
+    /* Размещаем контейнеры по центру */
+    display: grid;
+    place-items: center;
+}
+
+.grid-container-areas {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "A A A A   A A A A   A A A A"
+    "B B B B   B B B B   B B C C"
+    "B B B B   B B B B   B B C C";
+}
+
+.grid-container-areas .box-1 {
+    grid-area: A;
+}
+.grid-container-areas .box-2 {
+    grid-area: B;
+}
+.grid-container-areas .box-3 {
+    grid-area: C;
 }
