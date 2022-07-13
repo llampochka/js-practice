@@ -96,3 +96,4 @@ const kitty = {
 };
 testPet(kitty); // meow
 testPet({ name: 'Biba' }); // ошибка, передали не Cat
+// type unknown

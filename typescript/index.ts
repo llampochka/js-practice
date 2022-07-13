@@ -89,7 +89,7 @@ function printLoginState(state: LoginState): void {
 
 printLoginState({state: "success", response: 'ok'});
 
-// Intersection - в отличие от Union вместо || => &&
+// Intersection - в отличие от Union вместо || => &
 type Person = {
     name: string
 }
@@ -150,3 +150,5 @@ const kitty: Cat = {
 };
 testPet(kitty); // meow
 testPet({name: 'Biba'}); // ошибка, передали не Cat
+
+// type unknown

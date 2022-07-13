@@ -59,7 +59,7 @@ class Admin extends User {
 
     showHabbitFromChild() {
         // не будет работать, так как #habbit приватное свойство класса родителя
-        console.log('habbit from child', this.#habbit);
+        // console.log('habbit from child', this.#habbit);
     }
 }
 

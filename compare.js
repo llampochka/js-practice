@@ -25,6 +25,7 @@ console.log('({}) == true', {} == true); // false:  true приводится к
 console.log('{} == {}', {} == {}); // false
 console.log('[] == ""', [] == ''); // true ([].valueOf() => '')
 console.log('{} == ""', {} == ''); // false
+console.log('[1,2,3] == "1,2,3"', [1,2,3] == "1,2,3") // true
 
 console.log('null == undefined', null == undefined); // true
 console.log('null === undefined', null === undefined); // false
